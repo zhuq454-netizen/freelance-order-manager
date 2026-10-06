@@ -1,0 +1,18 @@
+{
+  "name": "@orderlydesk/desktop",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tauri dev",
+    "build:native": "tauri build --debug",
+    "check:native": "tauri info",
+    "typecheck": "node -e \"JSON.parse(require('node:fs').readFileSync('src-tauri/tauri.conf.json','utf8'))\""
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.8.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.8.4"
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+.agents/
+*.tsbuildinfo
+pnpm-lock.yaml
+dist/
+coverage/
+apps/mobile/unpackage/
+apps/desktop/src-tauri/target/
+packages/design-tokens/generated/
+packages/api-client/src/generated/
+apps/api/openapi.json

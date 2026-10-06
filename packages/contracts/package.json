@@ -1,0 +1,24 @@
+{
+  "name": "@orderlydesk/contracts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@orderlydesk/tsconfig": "workspace:*",
+    "@types/node": "^24.13.6",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "OrderlyDesk Web (Chrome)",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://127.0.0.1:5173",
+      "webRoot": "${workspaceFolder}/apps/web"
+    },
+    {
+      "name": "OrderlyDesk Desktop (Tauri)",
+      "type": "lldb",
+      "request": "launch",
+      "cargo": {
+        "args": [
+          "build",
+          "--manifest-path",
+          "${workspaceFolder}/apps/desktop/src-tauri/Cargo.toml"
+        ],
+        "filter": { "name": "orderlydesk-desktop", "kind": "bin" }
+      },
+      "cwd": "${workspaceFolder}/apps/desktop/src-tauri"
+    }
+  ]
+}

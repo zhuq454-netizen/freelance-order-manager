@@ -1,0 +1,37 @@
+@import '@orderlydesk/design-tokens/uniapp.scss';
+
+$uni-color-primary: $color-brand-primary;
+$uni-color-success: $color-status-success;
+$uni-color-warning: $color-status-warning;
+$uni-color-error: $color-status-error;
+
+$uni-text-color: $color-text-primary;
+$uni-text-color-inverse: #ffffff;
+$uni-text-color-grey: $color-text-muted;
+$uni-text-color-placeholder: $color-text-disabled;
+$uni-text-color-disable: $color-text-disabled;
+
+$uni-bg-color: $color-surface;
+$uni-bg-color-grey: $color-page;
+$uni-bg-color-hover: $color-surface-hover;
+$uni-bg-color-mask: $color-overlay;
+
+$uni-border-color: $color-border;
+
+$uni-font-size-sm: $font-size-xs;
+$uni-font-size-base: $font-size-base;
+$uni-font-size-lg: $font-size-lg;
+
+$uni-border-radius-sm: $radius-sm;
+$uni-border-radius-base: $radius-sm;
+$uni-border-radius-lg: $radius-md;
+$uni-border-radius-circle: 50%;
+
+$uni-spacing-row-sm: $spacing-1;
+$uni-spacing-row-base: $spacing-2;
+$uni-spacing-row-lg: $spacing-4;
+$uni-spacing-col-sm: $spacing-1;
+$uni-spacing-col-base: $spacing-2;
+$uni-spacing-col-lg: $spacing-4;
+
+$uni-opacity-disabled: 0.5;

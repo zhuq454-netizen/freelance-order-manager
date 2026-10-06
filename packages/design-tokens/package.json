@@ -1,0 +1,30 @@
+{
+  "name": "@orderlydesk/design-tokens",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "generated",
+    "src/tokens.json"
+  ],
+  "exports": {
+    "./tokens": "./generated/tokens.ts",
+    "./web.css": "./generated/web.css",
+    "./uniapp.scss": "./generated/uniapp.scss",
+    "./miniprogram.wxss": "./generated/miniprogram.wxss",
+    "./tokens.json": "./src/tokens.json"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "@orderlydesk/tsconfig": "workspace:*",
+    "@types/node": "^24.13.6",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

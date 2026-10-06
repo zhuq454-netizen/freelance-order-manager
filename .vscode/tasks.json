@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "OrderlyDesk: install",
+      "type": "shell",
+      "command": "pnpm install",
+      "problemMatcher": []
+    },
+    {
+      "label": "OrderlyDesk: web",
+      "type": "shell",
+      "command": "pnpm dev:web",
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": [{ "regexp": ".*", "file": 1, "location": 2, "message": 0 }],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "VITE",
+          "endsPattern": "Local:"
+        }
+      }
+    },
+    {
+      "label": "OrderlyDesk: api",
+      "type": "shell",
+      "command": "pnpm dev:api",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "OrderlyDesk: desktop",
+      "type": "shell",
+      "command": "pnpm dev:desktop",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "OrderlyDesk: verify",
+      "type": "shell",
+      "command": "pnpm verify",
+      "problemMatcher": []
+    }
+  ]
+}

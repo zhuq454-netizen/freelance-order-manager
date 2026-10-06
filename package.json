@@ -1,0 +1,32 @@
+{
+  "name": "orderlydesk",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.5.1",
+  "engines": {
+    "node": "^22.22.3 || >=24.15.0 <25",
+    "pnpm": ">=11 <12"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test": "pnpm -r --if-present test",
+    "test:integration": "pnpm --filter @orderlydesk/api test:integration",
+    "build": "pnpm --filter @orderlydesk/design-tokens build && pnpm -r --if-present build",
+    "openapi:generate": "pnpm --filter @orderlydesk/api openapi:generate",
+    "api-client:generate": "pnpm --filter @orderlydesk/api-client generate",
+    "dev:web": "pnpm --filter @orderlydesk/web dev --host 127.0.0.1",
+    "dev:api": "pnpm --filter @orderlydesk/api start:dev",
+    "dev:desktop": "pnpm --filter @orderlydesk/desktop dev",
+    "infra:up": "docker compose --env-file infra/docker/.env.local -f infra/docker/compose.local.yml up -d --wait",
+    "infra:down": "docker compose --env-file infra/docker/.env.local -f infra/docker/compose.local.yml down",
+    "verify": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm test:integration && pnpm build"
+  },
+  "devDependencies": {
+    "@orderlydesk/eslint-config": "workspace:*",
+    "eslint": "^9.39.4",
+    "prettier": "^3.9.9"
+  }
+}
